@@ -19,9 +19,17 @@ Allows for the embedding of video content from the Asset TV video platform
 
 == Description ==
 
-A plugin to add the embedding of Buto TV ( http://www.asset.tv ) video content to WordPress content.
+A plugin to add the embedding of Asset TV ( http://www.asset.tv ) videos into WordPress content.
 
 The plugin takes the URL of the video and embeds the video.
+
+For example the following URL will embed a video:
+http://web.asset.tv/player/?sc=ms4f3sdsf4c20df4&i=8300
+
+In addition to the usual URL, you can add &width= and &height= to the end to control the width and height of the video.
+
+e.g.
+http://web.asset.tv/player/?sc=ms4f3sdsf4c20df4&i=8300&width=640&height=360
 
 
 == Installation ==
