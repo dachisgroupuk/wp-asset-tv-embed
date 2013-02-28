@@ -47,7 +47,7 @@ class WpAssetTvEmbedFrontend extends WpAssetTvEmbedCore
         } else {
 
             list( $width, $height ) = wp_expand_dimensions( 640, 360, $attr['width'], $attr['height'] );
-
+            
             if ( isset( $matches['width'] ) ){
                 $width = $matches['width'];
             }
@@ -65,7 +65,7 @@ class WpAssetTvEmbedFrontend extends WpAssetTvEmbedCore
     playerHeight = {$height};
 </script>
 <script type="text/javascript" id="site_embed" src="https://api.nona.asset.tv/embed/site_embed.js"></script>
-<div id = 'asset_{$video_id}'></div>
+<div id = 'asset_{$video_id}' style="width:{$width}px; height: {$height} "></div>
 VIDEO;
 
     	return apply_filters( 'embed_assettv', $script, $matches, $attr, $url, $rawattr );
