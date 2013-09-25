@@ -15,7 +15,11 @@ class WpAssetTvEmbedAdmin extends WpAssetTvEmbedCore
 
         add_action( 'admin_menu', array( __CLASS__, 'add_admin_pages' ) );
 
-        register_deactivation_hook( self::$plugin_file, array( __CLASS__, 'uninstall' ) );
+
+        //register_deactivation_hook( self::$plugin_file, array( __CLASS__, 'uninstall' ) );
+
+        register_deactivation_hook( WpAssetTvEmbedCore::get_plugin_file(), array( $this, 'uninstall' ) );
+
     }
 
     /**
