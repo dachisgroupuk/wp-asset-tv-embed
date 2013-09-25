@@ -15,7 +15,7 @@ class WpAssetTvEmbedAdmin extends WpAssetTvEmbedCore
 
         add_action( 'admin_menu', array( __CLASS__, 'add_admin_pages' ) );
 
-        register_deactivation_hook( $this->plugin_file, array( $this, 'uninstall' ) );
+        register_deactivation_hook( self::$plugin_file, array( __CLASS__, 'uninstall' ) );
     }
 
     /**
@@ -24,7 +24,7 @@ class WpAssetTvEmbedAdmin extends WpAssetTvEmbedCore
      * @param void
      * @return void
      */
-    function add_admin_pages()
+    static function add_admin_pages()
     {
         add_media_page( __( 'Asset TV Embed' , 'imv'), __( 'Asset TV Embed' , 'imv'), 'create_users', 'asset-tv-embed', array( __CLASS__, 'index_page' ) );
     }
