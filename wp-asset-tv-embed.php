@@ -11,8 +11,7 @@
 	if ( !function_exists( 'add_action' ) ) {
 		$exit_msg = 'I\'m just a plugin, please don\'t call me directly';
 	} else {
-		// Subscribe2 needs WordPress 3.1 or above, exit if not on a compatible version
-		$exit_msg = sprintf( __( 'This version of WP Buto TV Embed required WordPress 3.1 or greater.' ) );
+		$exit_msg = sprintf( __( 'This version of WP Asset TV Embed required WordPress 3.1 or greater.' ) );
 	}
 	exit( $exit_msg );
 }
